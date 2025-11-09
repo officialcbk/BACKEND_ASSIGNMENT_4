@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { createLoan, getLoan, updateLoan, deleteLoan } from '../controllers/loanController';
+import { createLoan, getLoan, updateLoan, deleteLoan } from '../controllers/loanControllers';
 import { authenticateUser } from '../../../middleware/authenticateUser';
 
 const router = Router();
