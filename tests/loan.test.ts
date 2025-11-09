@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../src/app';
+import app,{ server } from '../src/app';
 
 describe('Loan API', () => {
   it('should create a loan', async () => {
@@ -31,4 +31,8 @@ describe('Loan API', () => {
     expect(response.status).toBe(200);
     expect(response.body.message).toBe('Loan with ID 1 deleted');
   });
+});
+
+afterAll(() => {
+  server.close(); 
 });
